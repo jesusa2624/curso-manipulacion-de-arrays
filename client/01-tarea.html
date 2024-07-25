@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+<input type="checkbox">
+<script >
+    const tareas = [
+        {
+            title: 'Tarea 1',
+            state: 'complete'
+        },
+        {
+            title: 'Tarea 2',
+            state: 'incomplete'
+        },
+        {
+            title: 'Tarea 3',
+            state: 'complete'
+        }
+    ]
+
+    const app = document.getElementById('app');
+    tareas.forEach(item => {
+        if (item.state === 'complete') {
+            app.innerHTML += `<li>${item.title} - ${item.state} <input type="checkbox" checked></li>`
+        }else {
+            app.innerHTML += `<li>${item.title} - ${item.state} <input type="checkbox" name="" id=""></li>`
+        }
+
+    })
+</script>
+</body>
+
+</html>
